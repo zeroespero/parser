@@ -1061,7 +1061,7 @@ lst = ['Красноярск',
 'vbdsrv'] # Аббревиатуры учебных заведений
 
 def pars(query):
-    r = requests.get('https://www.google.ru/search?&q=' + query + ' (город)', headers={'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36', 'accept': '*/*'})
+    r = requests.get('https://www.google.ru/search?&q=' + query + ' (город)', headers={'user-agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:73.0) Gecko/20100101 Firefox/73.0', 'accept': '*/*'})
     sp = bs(r.text, 'html.parser')
     if sp.find('div', class_='kno-ecr-pt PZPZlf gsmt i8lZMc') != None:
         result = str(sp.find('div', class_='kno-ecr-pt PZPZlf gsmt i8lZMc').text)
